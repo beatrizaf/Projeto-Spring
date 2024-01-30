@@ -5,4 +5,4 @@ Como resultado da aplicação, destaca-se o desenvolvimento de um sistema abrang
 
 ## UI 
 
-<img src="https://uploaddeimagens.com.br/images/004/727/178/full/Sem-T%C3%ADtulo-2.png?1706639852" alt="UI" style="width: 100%;">
+<img src="https://uploaddeimagens.com.br/images/004/727/200/original/photo1706641089.jpeg?1706641185" alt="UI" style="width: 100%;">
