@@ -4,3 +4,5 @@
 Como resultado da aplicação, destaca-se o desenvolvimento de um sistema abrangente denominado AstroFilx, que, embora não ofereça streaming de filmes, implementa um robusto CRUD (Create, Read, Update, Delete) para gerenciar informações relacionadas a filmes. Essa plataforma permite a organização eficiente de dados, fornecendo aos usuários a capacidade de visualizar, adicionar, atualizar e excluir informações pertinentes a cada filme. Apesar de não incluir a exibição direta de filmes, a ênfase está na gestão eficaz e na disponibilidade de informações relevantes para criar uma experiência sólida de gerenciamento de conteúdo cinematográfico.
 
 ## UI 
+
+![Telas](https://fv5-3.failiem.lv/down.php?i=ygey5qpm5v&view)
