@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,400&family=Inter:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    width: 50%;
+    background: 
+        url('imagens/back.png') right top,
+        url('imagens/back.png') repeat-y center top;
+    background-size: auto 100%;
+}
+
+.loginArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    min-height: 200px; /* Definindo uma altura mínima */
+    height: 100vh; /* Utilizando viewport height */
+    padding: 21px;
+    background-color: #fff;
+    box-shadow: 0 0 5000px 5000px rgba(116, 14, 232, 0.15);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-family: 'DM Sans';
+}
+
+/*-----------Logo-----------*/
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px; /* Adicionei um espaçamento entre o logo e outros elementos */
+    margin-left: 177px;
+}
+
+img {
+	width: 2.8%;
+	vertical-align: middle;
+	margin-right: 6px;
+}
+
+#logo {
+    color: rgba(116, 14, 232, 1);
+    font-family: 'DM Sans';
+    font-size: 25px;
+    line-height: 23px;
+    line-height: 1;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* ------------------------ */
+
+.titulo {
+    color: black;
+    font-size: 30px;
+    font-family: 'DM Sans';
+    font-weight: bold;
+    margin-left: -295px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+	font-family: 'DM Sans';
+	margin-left: 29px;
+	margin-bottom: 15px;
+}
+
+input {
+    background-color: rgba(232, 232, 232, 1);
+    color: rgba(134, 134, 134, 1);
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    width: 353px;
+}
+
+button {
+    background-color: rgba(116, 14, 232, 1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    width: 364px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(95, 0, 159, 1); /* Altere a cor conforme desejado */
+}
+
+a {
+    color: black;
+    font-weight: bold;
+    font-family: 'DM Sans';
+}
+
+
+
+/* Estilo para o modal de mensagem de erro */
+
+.show {
+    display: block !important;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-close {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Adicione um efeito de transição suave para o modal */
+.modal {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Adicione uma classe de fade para animar a entrada e a saída do modal */
+.fade {
+    animation: fade 0.3s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}

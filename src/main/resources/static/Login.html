@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <link rel="icon" href="imagens/icon.png" type="image/x-icon">
+    <title>Login - AstroFlix</title>
+</head>
+<body>
+    <div class="loginArea">
+		
+		<div class="logo-container">
+             <img src="imagens/icon.png" alt="Logo Icon" />
+             <span class="bold" id="logo">Astro</span><span id="logo">Flix</span>
+        </div><br>
+        
+        <div class="titulo">Login</div>
+        <div class="subtitle">Bem vindo de volta! Insira seus dados para fazer login</div>
+        <br>
+        
+        <div class="login-form">
+            <form>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="E-mail" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Senha" required>
+                </div>
+                <br>
+                <button id="btn-enviar" type="submit">Login</button>
+            </form>
+            <br>
+            <div class="signup-link">
+                <span class="semconta">Ainda não tem uma conta? </span>
+                <a href="SingUp.html" class="underline">Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+		document.addEventListener('DOMContentLoaded', function() {
+	    var botao = document.getElementById('btn-enviar');
+	    const url = 'http://localhost:8080/usuarios/login';
+	
+	    botao.addEventListener('click', function(event) {
+	        event.preventDefault();
+	
+	        const email = document.getElementById("email").value;
+	        const senha = document.getElementById("password").value;
+	
+	        // Validar o formato do e-mail
+	        if (!validateEmail(email)) {
+	            alert("Por favor, insira um e-mail válido.");
+	            return;
+	        }
+	
+	        const opcoes = {
+	            method: 'POST', 
+	            headers: {'Content-Type': 'application/json'},
+	            body: JSON.stringify({ email: email, senha: senha }),
+	        };
+	
+	        fetch(url, opcoes)
+	            .then(response => {
+	                if (!response.ok) {
+	                    throw new Error(`Erro na requisição: ${response.status}`);
+	                }
+	
+	                return response.json();
+	            })
+	            .then(dados => {
+	                if (dados.success) {
+	                    // Usuário autenticado com sucesso
+	                    console.log("Usuário autenticado:", dados.message);
+	                } else {
+	                    // Exibir mensagem de erro no modal
+	                    displayErrorModal(dados.message);
+	                }
+	            })
+	            .catch(erro => {
+	                console.error('Erro na requisição:', erro);
+	            });
+	    });
+	});
+	
+	
+	// Função para validar o formato do e-mail
+	function validateEmail(email) {
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	    return emailRegex.test(email);
+	}
+			
+	function displayErrorModal(message) {
+	    console.log('Exibindo modal de erro');
+	    const modal = document.createElement('div');
+	    modal.classList.add('modal', 'fade', 'show');  // Adicione a classe 'show'
+	
+	    const content = document.createElement('div');
+	    content.classList.add('modal-content');
+	    content.innerHTML = `<span class="modal-close" onclick="closeErrorModal()">×</span><p>${message}</p>`;
+	
+	    modal.appendChild(content);
+	    document.body.appendChild(modal);
+	
+	    // Adicione uma classe de fade para animar a entrada do modal
+	    setTimeout(() => {
+	        modal.classList.add('fade');
+	        console.log('Modal exibido com sucesso');
+	    }, 10);
+	}
+	
+	function closeErrorModal() {
+	    console.log('Fechando modal de erro');
+	    const modal = document.querySelector('.modal');
+	    modal.classList.remove('fade');
+	
+	    // Remova o modal após a animação de saída
+	    setTimeout(() => {
+	        modal.classList.remove('show');  // Remova a classe 'show'
+	        modal.remove();
+	        console.log('Modal fechado com sucesso');
+	    }, 300);
+	}
+
+	</script>
+</body>
+</html>

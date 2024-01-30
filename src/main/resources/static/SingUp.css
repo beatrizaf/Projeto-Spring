@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,400&family=Inter:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    width: 50%;
+    background: 
+        url('imagens/back.png') right top,
+        url('imagens/back.png') repeat-y center top;
+    background-size: auto 100%;
+}
+
+.cadastroArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 94%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5000px 5000px rgba(116, 14, 232, 0.15);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-family: 'DM Sans';
+}
+
+/*-----------Logo-----------*/
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px; /* Adicionei um espaçamento entre o logo e outros elementos */
+    margin-left: 168px;
+}
+
+img {
+	width: 2.8%;
+	vertical-align: middle;
+	margin-right: 6px;
+}
+
+#logo {
+    color: rgba(116, 14, 232, 1);
+    font-family: 'DM Sans';
+    font-size: 25px;
+    line-height: 23px;
+    line-height: 1;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* ------------------------ */
+
+.titulo {
+    color: black;
+    font-size: 30px;
+    font-family: 'DM Sans';
+    font-weight: bold;
+    margin-left: -251px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+	font-family: 'DM Sans';
+	margin-bottom: 13px;
+	margin-left: -99px;
+}
+
+
+input {
+    background-color: rgba(232, 232, 232, 1);
+    color: rgba(134, 134, 134, 1);
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    width: 353px;
+}
+
+select {
+    background-color: rgba(232, 232, 232, 1);
+    color: rgba(134, 134, 134, 1);
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    width: 363px;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+    background-image: url('imagens/seta.png'); 
+    background-position: 339px center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
+
+button {
+    background-color: rgba(116, 14, 232, 1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    width: 364px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(95, 0, 159, 1); 
+}
+
+a {
+    color: black;
+    font-weight: bold;
+    font-family: 'DM Sans';
+}

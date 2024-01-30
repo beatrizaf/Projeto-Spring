@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SingUp.css">
+    <link rel="icon" href="imagens/icon.png" type="image/x-icon">
+    <title>Sign Up - AstroFlix</title>
+</head>
+<body>
+    <div class="cadastroArea">
+		
+		<div class="logo-container">
+             <img src="imagens/icon.png" alt="Logo Icon" />
+             <span class="bold" id="logo">Astro</span><span id="logo">Flix</span>
+        </div><br>
+        
+        <div class="titulo">Cadastro</div>
+        <div class="subtitle">Insira seus dados para criar uma conta</div>
+        
+        <div class="cadastro-form">
+            <form>
+				
+                <div class="form-group">
+                    <input id="nome" placeholder="Nome" required>
+                </div><br>
+                
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="E-mail" required>
+                </div><br>
+                
+                <div class="form-group">
+                    <select id="assinatura" required>
+						<option value="" disabled selected hidden>Assinatura</option>
+                        <option value="basic">Basic</option>
+                        <option value="standard">Standard</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div><br>
+                
+                <div class="form-group">
+                    <input type="password" id="senha" placeholder="Senha" required>
+                </div><br>
+                
+                <button id="btn-enviar" type="submit">Cadastrar</button>
+                
+            </form><br>
+            
+            <div class="signup-link">
+	            <span class="semconta">Já tem uma conta?</span>
+	            <a href="Login.html" class="underline">Faça login</a>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script>
+		document.addEventListener('DOMContentLoaded', function() {
+            var botao = document.getElementById('btn-enviar');
+            const url = 'http://localhost:8080/usuarios/cadastro';
+
+            botao.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                const opcoes = {
+                    method: 'POST', 
+                    headers: {'Content-Type': 'application/json', },
+                    body: JSON.stringify({ nome: document.getElementById("nome").value , email: document.getElementById("email").value, assinatura: document.getElementById("assinatura").value, senha: document.getElementById("senha").value }),
+                };
+
+                console.log("Dados", document.getElementById("nome").value, document.getElementById("email").value, document.getElementById("assinatura").value, document.getElementById("senha").value);
+
+                fetch(url, opcoes)
+                    .then(response => {
+                        console.log("Requisição enviada");
+
+                        if (!response.ok) {
+                            throw new Error(`Erro na requisição: ${response.status}`);
+                        }
+
+                        return response;
+                    })
+                    .then(dados => {
+                        console.log("Dados da requisição", dados);
+                    })
+
+                    .catch(erro => {
+                        console.error('Erro na requisição:', erro);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
