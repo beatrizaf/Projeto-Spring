@@ -5,4 +5,4 @@ Como resultado da aplicação, destaca-se o desenvolvimento de um sistema abrang
 
 ## UI 
 
-![Telas](https://fv5-3.failiem.lv/down.php?i=ygey5qpm5v&view)
+![UI](https://uploaddeimagens.com.br/images/004/727/178/full/Sem-T%C3%ADtulo-2.png?1706639852)
