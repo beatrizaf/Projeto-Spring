@@ -1,2 +1,2 @@
 # Projeto-Spring
-⚡ Projeto realizado na disciplina de WEB, utilizando Spring Boot
+⚡ Este projeto, desenvolvido como parte da disciplina de Web, utiliza o framework Spring Boot para criar uma plataforma de gerenciamento de anúncios. Com foco na gestão eficiente de anúncios categorizados, o sistema permite a busca por anúncios através de diferentes filtros. Os usuários podem ser clientes ou administradores, cada um desempenhando um papel específico na plataforma. O intuito é proporcionar uma experiência intuitiva, organizada e eficaz na divulgação e busca de anúncios.
