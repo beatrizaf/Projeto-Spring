@@ -1,6 +1,6 @@
 # Spring Project
 
-⚡ This project, developed as part of the Web discipline, utilizes the Spring Boot framework to create an advertisement management platform. Focused on the efficient management of categorized advertisements, the system allows users to search for ads using various filters. Users can be either customers or administrators, each playing a specific role within the platform. The goal is to provide an intuitive, organized, and effective experience in advertising promotion and search.
+⚡ This project developed as part of the Web discipline, utilizes the Spring Boot framework to create an advertisement management platform. Focused on the efficient management of categorized advertisements, the system allows users to search for ads using various filters. Users can be either customers or administrators, each playing a specific role within the platform. The goal is to provide an intuitive, organized, and effective experience in advertising promotion and search.
 
 As a result of the application, the development of a comprehensive system named AstroFilx stands out. While it does not offer movie streaming, AstroFilx implements a robust CRUD (Create, Read, Update, Delete) system to manage movie-related information. This platform enables the efficient organization of data, giving users the ability to view, add, update, and delete information relevant to each movie. Despite not featuring direct movie display, the emphasis is on effective management and the availability of pertinent information to create a solid experience in movie content management.
 
